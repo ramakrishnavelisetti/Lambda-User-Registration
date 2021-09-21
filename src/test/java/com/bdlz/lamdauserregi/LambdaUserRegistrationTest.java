@@ -18,4 +18,15 @@ public class LambdaUserRegistrationTest {
         boolean actualResult = lambdaUserRegistration.firstName("RamaKrishna");
         Assert.assertEquals(false, actualResult);
     }
+    @Test
+    public void givenLastName_IsProper_ReturnTrue() {
+        boolean actualResult = lambdaUserRegistration.lastName("Velisetti");
+        Assert.assertEquals(true, actualResult);
+    }
+
+    @Test
+    public void givenLastName_IsNotProper_ReturnFalse() {
+        boolean actualResult = lambdaUserRegistration.lastName("veliseTTi");
+        Assert.assertEquals(false, actualResult);
+    }
 }
