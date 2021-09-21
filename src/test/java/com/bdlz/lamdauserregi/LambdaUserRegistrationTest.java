@@ -40,4 +40,16 @@ public class LambdaUserRegistrationTest {
         boolean actualResult = lambdaUserRegistration.emailId("ramakrishna96.velisettigmail.com");
         Assert.assertEquals(false, actualResult);
     }
+    @Test
+    public void givenMobileNumber_IsProper_ReturnTrue() {
+        boolean actualResult = lambdaUserRegistration.mobileNumber("91 9989774456");
+        Assert.assertEquals(true, actualResult);
+    }
+
+    @Test
+    public void givenMobileNumber_IsNotProper_ReturnFalse() {
+        boolean actualResult = lambdaUserRegistration.mobileNumber("919989774456");
+        Assert.assertEquals(false, actualResult);
+    }
+
 }
