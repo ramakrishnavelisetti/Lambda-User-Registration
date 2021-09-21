@@ -51,5 +51,16 @@ public class LambdaUserRegistrationTest {
         boolean actualResult = lambdaUserRegistration.mobileNumber("919989774456");
         Assert.assertEquals(false, actualResult);
     }
+    @Test
+    public void givenPasswordRule1_IsProper_ReturnTrue() {
+        boolean actualResult = lambdaUserRegistration.passwordRule1("qwgthjkdl");
+        Assert.assertEquals(true, actualResult);
+    }
+
+    @Test
+    public void givenPasswordRule1_IsNotProper_ReturnFalse() {
+        boolean actualResult = lambdaUserRegistration.passwordRule1("jnsdsjRcvc");
+        Assert.assertEquals(false, actualResult);
+    }
 
 }
