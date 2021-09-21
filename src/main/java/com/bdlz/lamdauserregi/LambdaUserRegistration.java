@@ -33,7 +33,7 @@ public class LambdaUserRegistration {
     }
     public static boolean testLastName(String lastName) throws InputInvalidException {
         try {
-            if (!firstName(lastName)) {
+            if (!lastName(lastName)) {
                 throw new InputInvalidException("Entered LastName is Invalid\n" +
                         "Last name starts with Capital Letter and has\n" +
                         "minimum 3 characters");
