@@ -1,7 +1,14 @@
 package com.bdlz.lamdauserregi;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class LambdaUserRegistration {
-    public static void main(String[] args) {
-        System.out.println("welcome to the exception user Registration program");
+    public static String regex;
+    public boolean firstName(String firstName) {
+        regex = "^[A-Z]{1}[a-z]{2,}$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(firstName);
+        return matcher.matches();
     }
 }
